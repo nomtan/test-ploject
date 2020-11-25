@@ -15,10 +15,10 @@ jobs:
         with:
           node-version: '12.13'         # v12.13のバージョンのNode環境を使用する
 
-      - name: Build Project
-        run: |
-          npm install                     # npm install のコマンドを実行する
-          npm run generate --if-present   # npm run generate のコマンドを実行する
+      #- name: Build Project
+      #  run: |
+      #    npm install                     # npm install のコマンドを実行する
+      #    npm run generate --if-present   # npm run generate のコマンドを実行する
 
       - name: List output files
         run: ls
