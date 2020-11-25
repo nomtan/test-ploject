@@ -10,6 +10,16 @@ jobs:
     runs-on: ubuntu-latest      # 仮想環境の種類を指定
     steps:
       - uses: actions/checkout@master   # リポジトリのデータを仮想環境にチェックアウトしてくるアクションを実行する
+    
+    - name: Use Node.js 12.13
+        uses: actions/setup-node@v1     # Node.jsの環境をセットアップする
+        with:
+          node-version: '12.13'         # v12.13のバージョンのNode環境を使用する
+
+      - name: Build Project
+        run: |
+          npm install                     # npm install のコマンドを実行する
+          npm run generate --if-present   # npm run generate のコマンドを実行する
 
 - name: List output files
         run: ls
